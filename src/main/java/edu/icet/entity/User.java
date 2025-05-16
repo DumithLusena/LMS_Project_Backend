@@ -3,7 +3,6 @@ package edu.icet.entity;
 import jakarta.persistence.*;
 import lombok.Data;
 
-import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.util.List;
 
@@ -13,7 +12,7 @@ import java.util.List;
 public class User {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Integer id;
+    private Integer userId;
     private String name;
     private String email;
 
@@ -22,4 +21,7 @@ public class User {
 
     @OneToMany(mappedBy = "user")
     private List<Borrow> borrows;
+
+
 }
+

@@ -29,4 +29,5 @@ public class Borrow {
 
     @Column(name = "returned_at")
     private LocalDateTime returnedAt;
+
 }

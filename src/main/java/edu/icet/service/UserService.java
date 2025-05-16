@@ -1,7 +1,6 @@
 package edu.icet.service;
 
 import edu.icet.dto.UserDTO;
-import org.springframework.stereotype.Service;
 
 import java.util.List;
 

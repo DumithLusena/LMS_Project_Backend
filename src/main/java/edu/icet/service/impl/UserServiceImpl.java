@@ -1,4 +1,4 @@
-package edu.icet.service.Impl;
+package edu.icet.service.impl;
 
 import edu.icet.dto.UserDTO;
 import edu.icet.entity.User;
@@ -16,7 +16,6 @@ public class UserServiceImpl implements UserService {
 
     private final UserRepository userRepository;
 
-
     @Override
     public UserDTO getUserById(Integer userId) {
         User user = userRepository.findById(userId)
@@ -33,7 +32,7 @@ public class UserServiceImpl implements UserService {
 
     private UserDTO convertToDTO(User user) {
         return new UserDTO(
-                user.getId(),
+                user.getUserId(),
                 user.getName(),
                 user.getEmail(),
                 user.getCreatedAt()
