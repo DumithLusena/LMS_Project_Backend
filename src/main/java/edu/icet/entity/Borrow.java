@@ -12,9 +12,21 @@ public class Borrow {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
-    private Integer userId;
-    private String bookId;
+
+    @ManyToOne
+    @JoinColumn(name = "user_id")
+    private User user;
+
+    @ManyToOne
+    @JoinColumn(name = "book_id")
+    private Book book;
+
+    @Column(name = "borrowed_at")
     private LocalDateTime borrowedAt;
+
+    @Column(name = "due_date")
     private LocalDateTime dueDate;
+
+    @Column(name = "returned_at")
     private LocalDateTime returnedAt;
 }

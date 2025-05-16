@@ -5,12 +5,9 @@ import lombok.Data;
 import java.time.LocalDateTime;
 
 @Data
-public class BorrowDTO {
-    private Integer id;
+public class IssueBookRequestDTO {
     private Integer userId;
-    private String userName;
     private String bookIsbn;
     private LocalDateTime borrowedAt;
     private LocalDateTime dueDate;
-    private LocalDateTime returnedAt;
 }
