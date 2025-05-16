@@ -1,13 +1,18 @@
 package edu.icet.dto;
 
+import lombok.AllArgsConstructor;
 import lombok.Data;
+import lombok.NoArgsConstructor;
 
 import java.time.LocalDate;
+import java.time.LocalDateTime;
 
 @Data
+@AllArgsConstructor
 public class UserDTO {
     private Integer id;
     private String name;
     private String email;
-    private LocalDate createdAt;
+    private LocalDateTime createdAt;
+
 }
